@@ -1466,13 +1466,13 @@ body.modal-open .browser-wrapper webview {
 }
 
 .download-file-thumb {
-  height: 128px;
-  flex: 0 0 128px;
-  display: grid;
-  place-items: center;
+  height: 180px;
+  flex: 0 0 180px;
+  display: block;
   background: #f1f5f9;
   color: #64748b;
   overflow: hidden;
+  position: relative;
 }
 
 .download-file-thumb img,
@@ -1480,6 +1480,7 @@ body.modal-open .browser-wrapper webview {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1487,6 +1488,22 @@ body.modal-open .browser-wrapper webview {
   position: relative;
   background: #111827;
   color: #fff;
+}
+
+.download-file-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.download-file-card:hover .download-file-play-overlay {
+  opacity: 1;
 }
 
 .download-file-video {
@@ -2117,6 +2134,7 @@ body {
   width: 58px;
   height: 58px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .resource-name {
@@ -3479,6 +3497,7 @@ select {
   height: 62px;
   border-radius: 8px;
   background: #eef3fa;
+  object-fit: cover;
 }
 
 .resource-thumb.video {
