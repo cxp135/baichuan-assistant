@@ -1,0 +1,8 @@
+{
+  "name": "ai-account-manager",
+  "version": "3.5.0",
+  "description": "AI系统多账号管理器 - 支持多平台账号管理",
+  "main": "src/main.js",
+  "author": "",
+  "license": "MIT"
+}

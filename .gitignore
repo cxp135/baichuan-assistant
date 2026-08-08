@@ -1,0 +1,34 @@
+# 依赖和缓存
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Electron 用户数据（含浏览器缓存、Session、分区数据）
+src/data/electron-user-data/
+**/electron-user-data/
+
+# 临时解包目录
+resources/%TEMP%/
+resources/app_asar_extracted/src/data/electron-user-data/
+
+# 二进制 asar 包（只追踪解包源码）
+resources/app.asar
+
+# 临时文件
+*.tmp
+*.bak
+*.log
+
+# 构建产物
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# 大文件 exe（超过 GitHub 100MB 限制）
+*.exe
+*.dll

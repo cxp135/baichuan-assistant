@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>激活验证</title>
+  <link rel="stylesheet" href="license.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <img src="../icon.png" alt="" class="app-icon">
+      <div>
+        <p class="eyebrow">AI ACCOUNT MANAGER</p>
+        <h1>激活后进入工作台</h1>
+        <p class="subtext">激活码会绑定当前电脑，后续启动无需重复输入。</p>
+      </div>
+    </header>
+
+    <section class="device-panel">
+      <div>
+        <span class="label">本机设备码</span>
+        <code id="deviceId">读取中...</code>
+      </div>
+      <button id="copyDeviceBtn" class="secondary" type="button">复制设备码</button>
+    </section>
+
+    <section class="request-panel" aria-live="polite">
+      <div class="request-copy">
+        <label class="label" for="authorizationRequest">客户授权请求码</label>
+        <textarea id="authorizationRequest" readonly placeholder="点击“获取本机地址”后生成"></textarea>
+        <p>客户将请求码发给管理者，管理者可生成只绑定这台电脑的激活码；客户不需要安装激活码管理器。</p>
+        <div id="localNetworkInfo" class="network-list"></div>
+      </div>
+      <div class="request-actions">
+        <button id="getNetworkBtn" class="secondary" type="button">获取本机地址</button>
+        <button id="copyRequestBtn" class="secondary" type="button" disabled>复制授权请求</button>
+      </div>
+    </section>
+
+    <section class="connection-panel" aria-live="polite">
+      <div class="connection-copy">
+        <span class="label">公网/隧道地址</span>
+        <strong id="embeddedServerUrl">输入激活码后自动读取</strong>
+        <p>新激活码已内置管理器地址，朋友只需输入激活码，不需要手动填写 IP。</p>
+      </div>
+      <button id="copyEmbeddedServerBtn" class="secondary" type="button" disabled>复制地址</button>
+    </section>
+
+    <section class="form">
+      <label for="serverUrl">授权服务地址（可选）</label>
+      <input id="serverUrl" type="url" placeholder="新激活码会自动读取地址" autocomplete="off">
+      <p class="hint">优先使用激活码内置的公网/隧道地址；旧激活码没有地址时，才需要手动填写管理器地址。</p>
+
+      <label for="licenseKey">激活码</label>
+      <input id="licenseKey" type="text" placeholder="请输入 BOSSACT 开头的激活码" autocomplete="off">
+      <button id="activateBtn" class="primary" type="button">验证并进入</button>
+      <p id="message" class="message" role="status"></p>
+    </section>
+
+    <section class="status-panel">
+      <div><span>授权状态</span><strong id="licenseState">读取中...</strong></div>
+      <div><span>到期时间</span><span id="licenseExpire">--</span></div>
+    </section>
+  </main>
+  <script src="license.js"></script>
+</body>
+</html>
