@@ -1466,8 +1466,8 @@ body.modal-open .browser-wrapper webview {
 }
 
 .download-file-thumb {
-  height: 128px;
-  flex: 0 0 128px;
+  height: 180px;
+  flex: 0 0 180px;
   display: block;
   background: #f1f5f9;
   color: #64748b;
