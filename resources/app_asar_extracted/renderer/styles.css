@@ -2117,6 +2117,7 @@ body {
   width: 58px;
   height: 58px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .resource-name {
@@ -3479,6 +3480,7 @@ select {
   height: 62px;
   border-radius: 8px;
   background: #eef3fa;
+  object-fit: cover;
 }
 
 .resource-thumb.video {
