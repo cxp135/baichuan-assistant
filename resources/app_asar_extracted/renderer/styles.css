@@ -1800,14 +1800,7 @@ body {
 .titlebar-icon {
   width: 28px;
   height: 28px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #cce2da;
-  border-radius: 8px;
-  background: var(--accent-light);
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 800;
+  object-fit: contain;
 }
 
 .titlebar-title {
@@ -2264,16 +2257,9 @@ select {
 }
 
 .titlebar-icon {
-  display: grid;
-  place-items: center;
   width: 30px;
   height: 30px;
-  border: 1px solid #cfe0ff;
-  border-radius: 8px;
-  background: #eaf4ff;
-  color: #1767d2;
-  font-size: 13px;
-  font-weight: 800;
+  object-fit: contain;
 }
 
 .titlebar-title {
@@ -3868,8 +3854,6 @@ select {
 
 .titlebar-icon {
   object-fit: contain;
-  padding: 2px;
-  background: #fbfdff;
   font-size: 0;
 }
 
