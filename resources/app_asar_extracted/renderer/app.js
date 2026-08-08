@@ -2457,9 +2457,12 @@ function renderDownloadLibrary() {
     } else {
       thumb = '<div class="download-file-icon">FILE</div>';
     }
+    const playBtn = (file.type === 'video' || file.type === 'image')
+      ? `<div class="download-file-play-overlay"><svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>`
+      : '';
     return `
       <div class="download-file-card" draggable="true" data-path="${escapeHtml(file.path)}" data-file-url="${escapeHtml(file.fileUrl)}" title="单击打开，拖拽到其他软件或网页上传区">
-        <div class="download-file-thumb ${file.type === 'video' ? 'video' : ''}">${thumb}</div>
+        <div class="download-file-thumb ${file.type === 'video' ? 'video' : ''}">${thumb}${playBtn}</div>
         <div class="download-file-info">
           <div class="download-file-name" title="${escapeHtml(file.name)}">${escapeHtml(file.name)}</div>
           <div class="download-file-meta">
